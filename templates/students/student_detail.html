@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<h3>Student Details</h3>
+<p><b>Roll No:</b> {{ student.roll_no }}</p>
+<p><b>Name:</b> {{ student.name }}</p>
+<p><b>Email:</b> {{ student.email }}</p>
+<p><b>Phone:</b> {{ student.phone }}</p>
+<p><b>Gender:</b> {{ student.get_gender_display }}</p>
+<p><b>DOB:</b> {{ student.dob }}</p>
+<p><b>Course:</b> {{ student.course }}</p>
+<p><b>Address:</b> {{ student.address }}</p>
+<a href="{% url 'student_list' %}" class="btn btn-secondary">Back</a>
+{% endblock %}
